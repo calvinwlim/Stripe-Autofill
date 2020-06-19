@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "StripeFill",
+    "version": "0.0.1",
+    "description": "Stripe Autofill Chrome Extension",
+
+    "background": {
+        "scripts": ["stripe.js"]
+      },
+
+    "browser_action": {
+        "default_title": "StripeFill"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["stripe.js"]
+        }
+    ],
+
+    "permissions": [
+        "activeTab"
+    ]
+}
